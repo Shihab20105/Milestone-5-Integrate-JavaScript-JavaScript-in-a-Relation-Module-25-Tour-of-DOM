@@ -1,0 +1,1 @@
+/*                          25-1 What is dom, Connect your JS file with html file */
