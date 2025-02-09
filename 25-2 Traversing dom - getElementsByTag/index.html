@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>getElementsByTagName</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <style>
+        li{
+            color: yellowgreen;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>25-2 Traversing dom - getElementsByTagName</h1>
+    </header>
+    <main>
+        <h1>I am Exploring What is DOM</h1>
+        <ul>
+            <li>Document Object Model</li>
+            <li>D for Document</li>
+            <li>O for Object</li>
+            <li>M for Model</li>
+        </ul>
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Mango</li>
+        </ul>
+    </main>
+    <script src="JS/dom.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        //console.log(liCollection);
+        for(const li of liCollection){
+            console.log(li.innerText);
+        }
+
+        const allHeadings = document.getElementsByTagName('h1');
+        for(const h1 of allHeadings){
+            console.log(h1.innerText);
+        }
+    </script>
 </body>
 </html>
