@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling dom properties</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <style>
+        .fruits-container li{
+            color: yellowgreen;
+        }
+        #fruits-title{
+            color:black;
+        }
+        .important-places{
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>25-6 Styling dom properties, add and remove css class using JS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis vel nulla repudiandae sit odio sunt perspiciatis nihil necessitatibus ad aliquid maiores corrupti dignissimos, enim itaque cupiditate praesentium. Corporis odit aspernatur, sint voluptatum dolores ipsum eligendi eius accusamus numquam repellat tempore quasi et. Quibusdam rem blanditiis ullam quod autem voluptates omnis.</p>
+    </header>
+    <main>
+        <section>
+            <h1>I am Exploring What is DOM</h1>
+            <ul>
+                <li>Document Object Model</li>
+                <li>D for Document</li>
+                <li>O for Object</li>
+                <li>M for Model</li>
+            </ul>
+        </section>
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits I Like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Mango</li>
+            </ul>
+        </section>
+        <section id="places-container" class="large-text">
+            <h1 id="places-title">Places I Like to Visit</h1>
+            <ul>
+                <li class="important-places">Shundarban</li>
+                <li class="important-places">Bandarban</li>
+                <li class="important-places">Shalban</li>
+                <li class="other-place">Kataban</li>
+            </ul>
+        </section>
+    </main>
+    <script src="JS/dom.js"></script>
+    <script src="JS/styleInJs.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        //console.log(liCollection);
+        for(const li of liCollection){
+            //console.log(li.innerText);
+        }
+
+        //Option 1: getElementsByTagName
+        const allHeadings = document.getElementsByTagName('h1');
+        for(const h1 of allHeadings){
+            //console.log(h1.innerText);
+        }
+
+        //Option 2: getElementById
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'fruits Changed by JavaScript';
+
+        //Option 3: getElementsByClassName
+        const places = document.getElementsByClassName('important-places');
+        for(const place of places){
+            //console.log(place.innerText);
+        }
+
+        //Option 4: querySelector
+
+
+        //Option 5: querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li');
+        //console.log(someLi);
+        for(const li of someLi){
+            //console.log(li.innerText);
+        }
+        
+    </script>
+    
+</body>
+</html>
