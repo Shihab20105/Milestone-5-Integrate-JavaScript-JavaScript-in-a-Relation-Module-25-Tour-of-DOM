@@ -1,0 +1,25 @@
+
+/*                          25-9 Module summary (DOM Review) */
+
+h1{
+    color: lightcoral;
+}
+
+/* .yellow-bg{
+    background-color: yellowgreen !important;
+} */
+
+
+/* .yellow-bg{
+    text-align: center;
+} */
+
+
+.large-text{
+    font-size: 2em;
+}
+
+
+.text-center{
+    text-align: center;
+}
